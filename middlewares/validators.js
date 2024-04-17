@@ -15,7 +15,7 @@ validators.validate = (validationArray) => async (req, res, next) => {
 };
 
 validators.checkObjectId = (paramId) => {
-  if (mongoose.Types.ObjectId.isValid(paramId)) {
+  if (!mongoose.Types.ObjectId.isValid(paramId)) {
     throw new Error("Invalid Id");
   }
   return true;

@@ -19,7 +19,7 @@ authController.loginWithEmail = catchAsync(async (req, res, next) => {
     true,
     { user, accessToken },
     null,
-    "Create User Successfully"
+    "Log In Successfully"
   );
 });
 module.exports = authController;

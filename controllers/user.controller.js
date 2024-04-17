@@ -111,5 +111,12 @@ userController.getSingleUser = catchAsync(async (req, res, next) => {
     false,
     "Get single user successfully"
   );
+
+});
+
+userController.updateProfile = catchAsync(async (req, res, next) => {
+  const currentUserId = req.userId;
+  const { name, email } = req.body;
+  let user = await User.findById(currentUserId);
 });
 module.exports = userController;

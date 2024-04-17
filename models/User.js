@@ -29,12 +29,12 @@ userSchema.methods.toJSON = function () {
   delete user.password;
   delete user.isDeleted;
   return user;
-
 };
 userSchema.methods.generateToken = async function () {
   const accessToken = await jwt.sign({ _id: this._id }, JWT_SECRET_KEY, {
     expiresIn: "1d",
   });
+  return accessToken;
 };
 const User = mongoose.model("User", userSchema);
 module.exports = User;

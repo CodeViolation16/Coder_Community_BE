@@ -1,6 +1,6 @@
 const Post = require("../models/Post");
 const { AppError, sendResponse, catchAsync } = require("../helpers/utils");
-const User = require("../models/User");
+const User = require('../models/User');
 const Comment = require("../models/Comment");
 const Friend = require("../models/Friend");
 

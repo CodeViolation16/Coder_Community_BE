@@ -10,7 +10,7 @@ const {
   getPosts,
   deleteSinglePost,
   getCommentsOfPost,
-} = require("../controllers/post.controllers");
+} = require("../controllers/post.controller");
 
 /**
  * @route GET posts/user/:userId?page=1&limit=10
